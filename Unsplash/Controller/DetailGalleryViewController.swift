@@ -27,8 +27,8 @@ class DetailGalleryViewController: UIViewController, UITextViewDelegate {
     }
     
     func setDetailComponentAuthor(author:String, fileName:String, authorUrl:String, imageId:Int) {
-        let imageWidth = mainImage.frame.size.width
-        let imageHeight = mainImage.frame.size.height
+        let imageWidth = self.view.frame.size.width
+        let imageHeight = self.view.frame.size.height
         let urlImage = "https://unsplash.it/\(imageWidth)/\(imageHeight)?image=\(imageId)"
         authorLabel.text = author
         fileNameLabel.text = fileName

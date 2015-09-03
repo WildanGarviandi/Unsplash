@@ -11,13 +11,13 @@
 		26163D571B984F0F008F6781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26163D551B984F0F008F6781 /* Main.storyboard */; };
 		26163D591B984F0F008F6781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26163D581B984F0F008F6781 /* Assets.xcassets */; };
 		26163D5C1B984F0F008F6781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26163D5A1B984F0F008F6781 /* LaunchScreen.storyboard */; };
-		26163D671B984F0F008F6781 /* UnsplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26163D661B984F0F008F6781 /* UnsplashTests.swift */; };
 		26163D721B984F0F008F6781 /* UnsplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26163D711B984F0F008F6781 /* UnsplashUITests.swift */; };
 		26163D851B984FBC008F6781 /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26163D841B984FBC008F6781 /* GalleryListViewController.swift */; };
 		26163D871B98596B008F6781 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26163D861B98596B008F6781 /* GalleryTableViewCell.swift */; };
 		26163D891B985A53008F6781 /* GalleryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26163D881B985A53008F6781 /* GalleryList.swift */; };
 		26163D8B1B985EAA008F6781 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26163D8A1B985EAA008F6781 /* ServerManager.swift */; };
 		26FC79D51B98BD8900952DEA /* DetailGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC79D41B98BD8900952DEA /* DetailGalleryViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		26FC79D71B98D69700952DEA /* GalleryDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC79D61B98D69700952DEA /* GalleryDetailTest.swift */; settings = {ASSET_TAGS = (); }; };
 		285D8B5572F9943AF6069BF0 /* Pods_Unsplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC5E91FF84668EE8801CBA /* Pods_Unsplash.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,6 @@
 		26163D5B1B984F0F008F6781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26163D5D1B984F0F008F6781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26163D621B984F0F008F6781 /* UnsplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		26163D661B984F0F008F6781 /* UnsplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashTests.swift; sourceTree = "<group>"; };
 		26163D681B984F0F008F6781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26163D6D1B984F0F008F6781 /* UnsplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26163D711B984F0F008F6781 /* UnsplashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashUITests.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		26163D8A1B985EAA008F6781 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		26915FC01B98728F004C552C /* Unsplash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unsplash-Bridging-Header.h"; sourceTree = "<group>"; };
 		26FC79D41B98BD8900952DEA /* DetailGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailGalleryViewController.swift; sourceTree = "<group>"; };
+		26FC79D61B98D69700952DEA /* GalleryDetailTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDetailTest.swift; sourceTree = "<group>"; };
 		8D436131FFE184D42EAB4BDB /* Pods-Unsplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unsplash/Pods-Unsplash.debug.xcconfig"; sourceTree = "<group>"; };
 		D721D9DA49134021DC5360F5 /* Pods-Unsplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unsplash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unsplash/Pods-Unsplash.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +139,8 @@
 		26163D651B984F0F008F6781 /* UnsplashTests */ = {
 			isa = PBXGroup;
 			children = (
-				26163D661B984F0F008F6781 /* UnsplashTests.swift */,
 				26163D681B984F0F008F6781 /* Info.plist */,
+				26FC79D61B98D69700952DEA /* GalleryDetailTest.swift */,
 			);
 			path = UnsplashTests;
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26163D671B984F0F008F6781 /* UnsplashTests.swift in Sources */,
+				26FC79D71B98D69700952DEA /* GalleryDetailTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Unsplash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.twilio.Unsplash;
@@ -549,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Unsplash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.twilio.Unsplash;

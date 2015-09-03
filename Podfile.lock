@@ -1,0 +1,42 @@
+PODS:
+  - AFNetworking (2.6.0):
+    - AFNetworking/NSURLConnection (= 2.6.0)
+    - AFNetworking/NSURLSession (= 2.6.0)
+    - AFNetworking/Reachability (= 2.6.0)
+    - AFNetworking/Security (= 2.6.0)
+    - AFNetworking/Serialization (= 2.6.0)
+    - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking/NSURLConnection (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.0)
+  - AFNetworking/Security (2.6.0)
+  - AFNetworking/Serialization (2.6.0)
+  - AFNetworking/UIKit (2.6.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Argo (1.0.4):
+    - Box (~> 1.2)
+    - Runes (>= 1.2.2)
+  - Box (1.2.2)
+  - pop (1.0.7)
+  - Runes (2.0.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - Argo
+  - pop (~> 1.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  Argo: 75f6921e52a65b9a98be0ba635c2f47e4f2cf08e
+  Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  Runes: 4fe81355f4620b76b02176222d264b33e60dba51
+
+COCOAPODS: 0.38.2

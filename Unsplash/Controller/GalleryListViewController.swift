@@ -9,14 +9,27 @@
 import UIKit
 import Argo
 
-class GalleryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GalleryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PopUpViewDelegate {
     
     @IBOutlet var mainTableView: UITableView!
     
+    var delegate:PopUpViewDelegate?
     var objectGallery = [GalleryList]()
+    var viewPopup:PopUpView!
+    var backgroundPopUp:UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundPopUp = UIView.init(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        backgroundPopUp.backgroundColor = UIColor(white: 0.3, alpha: 0.9)
+        
+        viewPopup = PopUpView(frame: CGRectMake(self.view.center.x / 8, self.view.center.y / 2, 280, 280))
+        viewPopup.delegate = self;
+        
+        self.view.addSubview(backgroundPopUp)
+        self.view.addSubview(viewPopup)
+        self.view.bringSubviewToFront(viewPopup)
         getDataWithUrl("https://unsplash.it/list")
     }
     
@@ -34,7 +47,7 @@ class GalleryListViewController: UIViewController, UITableViewDelegate, UITableV
         if (objectGallery.count == 0) {
             return 1
         } else {
-            return objectGallery.count;
+            return objectGallery.count
         }
     }
     
@@ -83,6 +96,19 @@ class GalleryListViewController: UIViewController, UITableViewDelegate, UITableV
         detailVC.fileName = objectGallery[row].filename
         detailVC.authorUrl = objectGallery[row].author_url
         detailVC.imageId = objectGallery[row].id
+    }
+    
+    // MARK: -Protocol impl
+    func closePopUpView(finish: Bool) {
+        print("close delegate called")
+        UIView.animateWithDuration(0.5, delay: 0, options:UIViewAnimationOptions.CurveEaseOut,
+            animations: { () -> Void in
+                self.viewPopup.alpha = 0
+                self.backgroundPopUp.alpha = 0
+            }) { (finish) -> Void in
+                self.viewPopup.removeFromSuperview()
+                self.backgroundPopUp.removeFromSuperview()
+        }
     }
 
 }
